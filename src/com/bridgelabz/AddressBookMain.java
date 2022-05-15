@@ -22,13 +22,17 @@ public class AddressBookMain {
 
             switch (choice) {
                 case 1:
+                    //Adding New Contact Details
                     addressBook.addNewContact();
                     break;
                 case 2:
+                    //Edit Contact Details
+                    addressBook.editContact();
                     break;
                 case 3:
                     break;
                 case 4:
+                    //Show Contact Details
                     addressBook.displayContact();
                     break;
                 case 5:
@@ -39,6 +43,5 @@ public class AddressBookMain {
                     break;
             }
         }while( choice != 5 );
-
     }
 }
