@@ -1,49 +1,49 @@
 package com.bridgelabz;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class AddressBookMain {
-
     public static void main(String[] args) {
+
         //Welcome message for Users
-        System.out.println("Welcome to Address Book System Problem By Nilesh Darekar.");
+        System.out.println("Welcome to Address Book System Problem Prepared By Nilesh Darekar.");
 
-        //Variable for user Choice
-        int choice;
-
-        //AddressBook Class Object for Contact Management
-        AddressBook addressBook = new AddressBook();
+        int choice; //Variable for user Choice
 
         //Show Menu for user to Select Operation on AddressBook
         do {
             System.out.println("***** ADDRESS BOOK MANAGEMENT *****");
-            System.out.println("1. ADD NEW CONTACT\n2. EDIT CONTACT\n3. DELETE CONTACT" +
-                    "\n4. DISPLAY CONTACT\n5. EXIT");
+            System.out.println("1. ADD NEW ADDRESSBOOK\n2. EDIT ADDRESSBOOK\n3. DELETE ADDRESSBOOK" +
+                    "\n4. DISPLAY ADDRESSBOOKS\n5. SELECT ADDRESSBOOK\n6. EXIT");
             System.out.println("Please Select the Operation Number : ");
-            choice = addressBook.sc.nextInt();
+            choice = AddressBookRepo.userInput();
 
             switch (choice) {
                 case 1:
-                    //Adding New Contact Details
-                    addressBook.addNewContact();
+                    AddressBookRepo.addNewAddressBook();    //Adding New Address Book to System
                     break;
                 case 2:
-                    //Edit Contact Details
-                    addressBook.editContact();
+                    //Edit Address Book Details
+                    //addressBook.editContact();
                     break;
                 case 3:
-                    //Delete the Contact Details
-                    addressBook.deleteContact();
+                    AddressBookRepo.deleteAddressBook();    //Delete the Address Book Details
                     break;
                 case 4:
-                    //Show Contact Details
-                    addressBook.displayContact();
+                    AddressBookRepo.displayAddressBooks();  //Show Contact Details
                     break;
                 case 5:
-                    System.out.println("Thank You for Using Address Book.");
+                    AddressBookRepo.selectAddressBook();
+                    break;
+                case 6:
+                    System.out.println("Thank You for using Address Book System.");
                     break;
                 default:
-                    System.out.println("Please Select the Operation between 1 to 5 only.");
+                    System.out.println("Please Select the Operation between 1 to 6 only.");
                     break;
             }
-        }while( choice != 5 );
+        }while( choice != 6 );
     }
 }
