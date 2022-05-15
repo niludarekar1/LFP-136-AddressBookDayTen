@@ -64,21 +64,21 @@ public class AddressBook {
         for(Contacts contact : contactList) {
             if (firstName.equalsIgnoreCase(contact.getFirstName())) {
                 isAvailable = true;
-                System.out.println("Enter the Last Name :");
-                contact.setLastname(sc.next());
-                System.out.println("Enter the Address :");
-                contact.setAddress(sc.next());
-                System.out.println("Enter the City :");
-                contact.setCity(sc.next());
-                System.out.println("Enter the State :");
-                contact.setState(sc.next());
-                System.out.println("Enter the Zip Code :");
-                contact.setZip(sc.next());
-                System.out.println("Enter the Phone Number :");
-                contact.setPhoneNo(sc.next());
-                System.out.println("Enter the EMail ID :");
-                contact.setEmailID(sc.next());
-                break;
+                    System.out.println("Enter the Last Name :");
+                    contact.setLastname(sc.next());
+                    System.out.println("Enter the Address :");
+                    contact.setAddress(sc.next());
+                    System.out.println("Enter the City :");
+                    contact.setCity(sc.next());
+                    System.out.println("Enter the State :");
+                    contact.setState(sc.next());
+                    System.out.println("Enter the Zip Code :");
+                    contact.setZip(sc.next());
+                    System.out.println("Enter the Phone Number :");
+                    contact.setPhoneNo(sc.next());
+                    System.out.println("Enter the EMail ID :");
+                    contact.setEmailID(sc.next());
+                    break;
             }
         }
         if(!isAvailable) {
